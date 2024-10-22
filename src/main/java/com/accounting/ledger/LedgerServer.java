@@ -37,7 +37,6 @@ public class LedgerServer extends AllDirectives {
         ClusterSharding.get(system).init(
                 Entity.of(LedgerEntity.ENTITY_KEY, ctx -> LedgerEntity.create(ctx.getEntityId()))
         );
-        LedgerServer server = new LedgerServer(system);
     }
 
     private void startServer(ActorSystem<?> system) {

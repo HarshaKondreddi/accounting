@@ -14,12 +14,13 @@ Ensure you have the following installed on your machine:
 
 - **Scala**: Version 2.13
 - **Java**: Version 11
-- **Cassandra**: Running instance required
+- **Cassandra**: Running instance required ``docker run -p 9042:9042 cassandra:latest``
 
 ## Setup Instructions
 
-1. **Clone the Repository**
+1. Clone the Repository
 2. Run the application from the file `LedgerServer`
 3. Use the following APIs to test
    - CreditAmount in an accountNumber - http://localhost:8081/credit?accountNumber={accountNumber}&amount={amount}
    - DeditAmount in an accountNumber  - http://localhost:8081/debit?accountNumber={accountNumber}&amount={amount}
+4. Verify the events in messages table of akka repository
